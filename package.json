@@ -5,6 +5,9 @@
     "type": "git",
     "url": ""
   },
+  "compilerOptions": {
+    "esModuleInterop": true
+  },
   "type": "commonjs",
   "description": "REST service starter for RS School",
   "main": "src/server.ts",

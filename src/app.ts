@@ -1,5 +1,5 @@
-const express = require('express');
 import { Request, Response, NextFunction } from 'express';
+const express = require('express');
 
 const contactRouter = require('./resources/contactform/contact.router');
 
