@@ -1,4 +1,3 @@
-import { Request, Response, NextFunction } from 'express';
 const express = require('express');
 
 const contactRouter = require('./resources/contactform/contact.router');
@@ -7,7 +6,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use('/', (req: Request, res: Response, next: NextFunction) => {
+app.use('/', (req, res, next) => {
 
   if (req.originalUrl === '/') {
     res.send('Service is running!');

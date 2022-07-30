@@ -1,11 +1,10 @@
-import * as express from 'express';
-import { Request, Response } from 'express';
+const express = require('express');
 
 const router = express.Router();
-const Contact = require('./contact.model.ts');
-const contactformService = require('./contact.service.ts');
+const Contact = require('./contact.model');
+const contactformService = require('./contact.service');
 
-router.route('/').post(async (req: Request, res: Response) => {
+router.route('/').post(async (req, res) => {
   const newContact = await contactformService.addContact(new Contact(req.body));
   if (newContact) {
     res.status(201).json(newContact);

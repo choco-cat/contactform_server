@@ -1,24 +1,15 @@
-interface IContact {
-  id: string;
-  name: string;
-  email: string;
-  phone: string;
-  birthday: string;
-  message: string;
-}
-
 class Contact {
-  id: string;
+  id;
 
-  name: string;
+  name;
 
-  email: string;
+  email;
 
-  phone: string;
+  phone;
 
-  birthday: string;
+  birthday;
 
-  message: string;
+  message;
 
   constructor({
     id,
@@ -27,7 +18,7 @@ class Contact {
     phone,
     birthday,
     message
-  } = {} as IContact) {
+  } = {}) {
     this.id = id;
     this.name = name;
     this.email = email;
@@ -38,4 +29,4 @@ class Contact {
 }
 
 module.exports = Contact;
-export {};
+
